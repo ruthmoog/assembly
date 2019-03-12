@@ -1,0 +1,15 @@
+        INP         /fetch user input
+        STA FIRST   /store input with label first
+        INP         /fetch user input
+        STA SECOND  /store input with label second
+        SUB FIRST   /subtract first number from acc
+        BRP LOWER   /branch if positive to LOWER label
+        LDA SECOND  /else, load data labelled second
+        BRA DONE    /branch to done to end the loop
+LOWER   LDA FIRST   /positive is true so load data labelled second
+DONE    OUT
+        HLT
+FIRST   DAT
+SECOND  DAT
+
+//Write a program to input two numbers and output the smallest.
